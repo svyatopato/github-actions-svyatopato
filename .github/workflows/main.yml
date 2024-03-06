@@ -71,4 +71,4 @@ jobs:
           name: built-app
           path: .
       - name: Execute performance test
-        run: ci/performance-test.sh
+        run: bash ci/performance-test.sh
