@@ -1,5 +1,5 @@
 # Github Actions katas
-
+Hi
 ## Introduction
 
 This repository contains a set of exercises to learn Github Actions.
