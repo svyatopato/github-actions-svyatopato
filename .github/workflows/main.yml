@@ -50,6 +50,11 @@ jobs:
         run: bash ci/build-docker.sh
       - name: push docker
         run: bash ci/push-docker.sh
+      - name: Upload built artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-app
+          path: .
   Component-test:
     runs-on: ubuntu-latest
     needs: [Docker-image]
