@@ -52,7 +52,7 @@ jobs:
         run: bash ci/push-docker.sh
   Component-test:
     runs-on: ubuntu-latest
-    needs: [Build]
+    needs: [Docker-image]
     steps:
       - name: Download an artifact
         uses: actions/download-artifact@v4
@@ -63,7 +63,7 @@ jobs:
         run: bash ci/component-test.sh
   Performance-test:
     runs-on: ubuntu-latest
-    needs: [Build]
+    needs: [Docker-image]
     steps:
       - name: Download an artifact
         uses: actions/download-artifact@v4
